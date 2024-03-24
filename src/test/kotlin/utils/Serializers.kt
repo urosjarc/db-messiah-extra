@@ -14,15 +14,15 @@ import com.urosjarc.dbmessiah.serializers.AllTS
 import com.urosjarc.dbmessiah.serializers.IdTS
 
 private object IDTS {
-    val sqlite: TypeSerializer<Id<Any>> = IdTS.sqlite_char { Id(it) }
-    val postgresql: TypeSerializer<Id<Any>> = IdTS.postgresql_UUID({ Id(it) }, { it.value })
-    val oracle: TypeSerializer<Id<Any>> = IdTS.oracle_VARCHAR2 { Id(it) }
-    val mysql: TypeSerializer<Id<Any>> = IdTS.mysql_CHAR { Id(it) }
-    val maria: TypeSerializer<Id<Any>> = IdTS.maria_UUID({ Id(it) }, { it.value })
-    val mssql: TypeSerializer<Id<Any>> = IdTS.mssql_UNIQUEIDENTIFIER { Id(it) }
-    val h2: TypeSerializer<Id<Any>> = IdTS.h2_UUID({ Id(it) }, { it.value })
-    val derby: TypeSerializer<Id<Any>> = IdTS.derby_CHAR { Id(it) }
-    val db2: TypeSerializer<Id<Any>> = IdTS.db2_CHAR { Id(it) }
+    val sqlite: TypeSerializer<Id<Any>> = IdTS.uuid.sqlite { Id(it) }
+    val postgresql: TypeSerializer<Id<Any>> = IdTS.uuid.postgresql({ Id(it) }, { it.value })
+    val oracle: TypeSerializer<Id<Any>> = IdTS.uuid.oracle { Id(it) }
+    val mysql: TypeSerializer<Id<Any>> = IdTS.uuid.mysql { Id(it) }
+    val maria: TypeSerializer<Id<Any>> = IdTS.uuid.maria({ Id(it) }, { it.value })
+    val mssql: TypeSerializer<Id<Any>> = IdTS.uuid.mssql { Id(it) }
+    val h2: TypeSerializer<Id<Any>> = IdTS.uuid.h2({ Id(it) }, { it.value })
+    val derby: TypeSerializer<Id<Any>> = IdTS.uuid.derby { Id(it) }
+    val db2: TypeSerializer<Id<Any>> = IdTS.uuid.db2 { Id(it) }
 }
 
 val db2_serializer = Db2Serializer(
