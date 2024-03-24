@@ -1,5 +1,5 @@
 package impl
 
 interface Test_Contract {
-    fun `test IdTS UUID`()
+    fun `test serializers`()
 }

@@ -28,6 +28,7 @@ val autouuid_domain_tables = listOf(
     createTable(Parent::id),
     createTable(Child::id),
     createTable(AutoParent::id),
+    createTable(AutoChild::id),
 )
 
 val h2_schema = H2Schema(name = "domain", tables = autouuid_domain_tables)
