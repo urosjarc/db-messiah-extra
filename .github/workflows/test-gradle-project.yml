@@ -1,0 +1,83 @@
+name: Tests for db-messiah-extra
+
+on:
+  push:
+
+jobs:
+  build-gradle-project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout project sources
+        uses: actions/checkout@v3
+
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+
+      - name: Run github tests
+        run: ./gradlew github
+
+    services:
+
+      db2:
+        image: icr.io/db2_community/db2
+        env:
+          LICENSE: accept
+          DB2INSTANCE: db2inst1
+          DB2INST1_PASSWORD: root
+          DBNAME: main
+          BLU: false
+          ENABLE_ORACLE_COMPATIBILITY: false
+          UPDATEAVAIL: NO
+          TO_CREATE_SAMPLEDB: true
+          REPODB: false
+          IS_OSXFS: false
+          PERSISTENT_HOME: true
+          HADR_ENABLED: false
+        ports:
+          - 50000:50000
+        options: >-
+          --privileged
+
+      maria:
+        image: mariadb
+        env:
+          MARIADB_ROOT_PASSWORD: root
+        ports:
+          - 3306:3306
+
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_DB: public
+          POSTGRES_PASSWORD: root
+          POSTGRES_USER: root
+        ports:
+          - 5432:5432
+
+      mysql:
+        image: mysql
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_TCP_PORT: 3307
+        ports:
+          - 3307:3307
+
+      mssql:
+        image: mcr.microsoft.com/mssql/server:2017-latest
+        env:
+          ACCEPT_EULA: Y
+          MSSQL_SA_PASSWORD: Root_root1
+        ports:
+          - 1433:1433
+
+      oracle:
+        image: gvenzl/oracle-xe:18-slim
+        env:
+          ORACLE_PASSWORD: root
+        ports:
+          - 1521:1521
+        options: >-
+          --health-cmd healthcheck.sh
+          --health-interval 20s
+          --health-timeout 10s
+          --health-retries 10
