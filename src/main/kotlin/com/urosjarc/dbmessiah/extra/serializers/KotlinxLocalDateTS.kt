@@ -7,8 +7,14 @@ import kotlinx.datetime.toKotlinLocalDate
 import java.sql.Date
 import java.sql.JDBCType
 
+/**
+ * Providing serializers for [LocalDate] class.
+ */
 public object KotlinxLocalDateTS {
 
+    /**
+     * Serializer [LocalDate] class to DATE database type.
+     */
     public val DATE: TypeSerializer<LocalDate> = TypeSerializer(
         kclass = LocalDate::class,
         dbType = "DATE",

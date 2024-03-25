@@ -2,6 +2,9 @@ package com.urosjarc.dbmessiah.extra.serializers
 
 import com.urosjarc.dbmessiah.data.TypeSerializer
 
+/**
+ * Providing all serializers for [kotlinx.datetime] classes related with time, grouped for specific supported database.
+ */
 public object KotlinxTimeTS {
     private val DATETIME = listOf(KotlinxInstantTS.DATETIME, KotlinxLocalDateTS.DATE, KotlinxLocalTimeTS.TIME)
     private val TIMESTAMP = listOf(KotlinxInstantTS.TIMESTAMP, KotlinxLocalDateTS.DATE, KotlinxLocalTimeTS.TIME)

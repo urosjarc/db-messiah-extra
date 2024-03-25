@@ -7,8 +7,14 @@ import kotlinx.datetime.toKotlinInstant
 import java.sql.JDBCType
 import java.sql.Timestamp
 
+/**
+ * Providing serializers for [Instant] class.
+ */
 public object KotlinxInstantTS {
 
+    /**
+     * Serializer [Instant] class to DATETIME database type.
+     */
     public val DATETIME: TypeSerializer<Instant> = TypeSerializer(
         kclass = Instant::class,
         dbType = "DATETIME",
@@ -16,6 +22,10 @@ public object KotlinxInstantTS {
         decoder = { rs, i, info -> rs.getTimestamp(i).toInstant().toKotlinInstant() },
         encoder = { ps, i, x -> ps.setTimestamp(i, Timestamp.from(x.toJavaInstant())) }
     )
+
+    /**
+     * Serializer [Instant] class to TIMESTAMP database type.
+     */
     public val TIMESTAMP: TypeSerializer<Instant> = TypeSerializer(
         kclass = Instant::class,
         dbType = "TIMESTAMP",
