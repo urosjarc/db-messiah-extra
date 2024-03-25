@@ -1,7 +1,9 @@
 package com.urosjarc.dbmessiah.extra.serializers
 
 import com.urosjarc.dbmessiah.data.TypeSerializer
-import kotlinx.datetime.*
+import kotlinx.datetime.Instant
+import kotlinx.datetime.toJavaInstant
+import kotlinx.datetime.toKotlinInstant
 import java.sql.JDBCType
 import java.sql.Timestamp
 

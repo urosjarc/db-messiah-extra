@@ -1,11 +1,11 @@
 package com.urosjarc.dbmessiah.extra.serializers
 
 import com.urosjarc.dbmessiah.data.TypeSerializer
-import kotlinx.datetime.*
-import java.sql.Date
+import kotlinx.datetime.LocalTime
+import kotlinx.datetime.toJavaLocalTime
+import kotlinx.datetime.toKotlinLocalTime
 import java.sql.JDBCType
 import java.sql.Time
-import java.sql.Timestamp
 
 public object KotlinxLocalTimeTS {
 
