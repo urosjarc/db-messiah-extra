@@ -33,7 +33,6 @@ java {
 }
 repositories {
     mavenCentral()
-    maven { url = URI("https://jitpack.io") }
 }
 
 testlogger {
@@ -43,7 +42,7 @@ testlogger {
 koverReport {
     filters {
         excludes { classes("*.Test_*") }
-        includes { classes("com.urosjarc.dbmessiah.*") }
+        includes { classes("com.urosjarc.dbmessiah.extra.*") }
     }
 }
 
@@ -93,11 +92,9 @@ tasks.dokkaHtml {
 dependencies {
     val dbMessiah = "0.0.1"
 
-    implementation(kotlin("reflect"))
-    implementation("org.apache.logging.log4j:log4j-api-kotlin:1.4.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0")
     compileOnly("com.urosjarc:db-messiah:$dbMessiah")
+    compileOnly("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
+    compileOnly("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0")
 
     testRuntimeOnly("com.ibm.db2:jcc:11.5.9.0")
     testRuntimeOnly("com.h2database:h2:2.2.224")
@@ -109,6 +106,8 @@ dependencies {
     testRuntimeOnly("org.postgresql:postgresql:42.7.1")
     testRuntimeOnly("com.oracle.database.jdbc:ojdbc11:23.3.0.23.09")
 
+    testImplementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0")
     testImplementation("org.apache.logging.log4j:log4j-slf4j2-impl:2.20.0")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("com.urosjarc:db-messiah:$dbMessiah")
