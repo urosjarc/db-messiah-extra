@@ -11,7 +11,7 @@ import java.time.Instant
 /**
  * Kotlinx serializer for [java.time.Instant] class.
  */
-public object InstantSerializer : KSerializer<Instant> {
+public object InstantJS : KSerializer<Instant> {
     override val descriptor: SerialDescriptor = PrimitiveSerialDescriptor("java.time.Instant", PrimitiveKind.STRING)
 
     override fun deserialize(decoder: Decoder): Instant {

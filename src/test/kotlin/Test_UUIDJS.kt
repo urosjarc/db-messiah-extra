@@ -6,7 +6,7 @@ import utils.UId
 import utils.json
 import kotlin.test.assertEquals
 
-class test_UUIDSerializer {
+class Test_UUIDJS {
     @Test
     fun `test id serialization`() {
         val id = UId<Parent>()

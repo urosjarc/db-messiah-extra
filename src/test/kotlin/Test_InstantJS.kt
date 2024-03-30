@@ -2,20 +2,20 @@ import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
 import org.junit.jupiter.api.Test
 import utils.json
-import java.time.LocalTime
+import java.time.Instant
 import kotlin.test.assertEquals
 
-class Test_LocalTimeSerializer {
+class Test_InstantJS {
     @Test
     fun `test serialization`() {
-        val instant = LocalTime.now()
+        val instant = Instant.now()
 
         /** Encoding */
         val instantJson = json.encodeToString(instant)
         assertEquals("\"$instant\"", instantJson)
 
         /** Decoding */
-        val instant_new = json.decodeFromString<LocalTime>(instantJson)
+        val instant_new = json.decodeFromString<Instant>(instantJson)
         assertEquals(instant, instant_new)
     }
 }

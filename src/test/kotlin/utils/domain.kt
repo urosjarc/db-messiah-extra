@@ -1,6 +1,6 @@
 package utils
 
-import com.urosjarc.dbmessiah.extra.kotlinx.UUIDSerializer
+import com.urosjarc.dbmessiah.extra.kotlinx.UUIDJS
 import kotlinx.datetime.Clock
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
@@ -19,7 +19,7 @@ value class Id<T>(val value: Int) {
 @Serializable
 @JvmInline
 value class UId<T>(
-    @Serializable(with = UUIDSerializer::class)
+    @Serializable(with = UUIDJS::class)
     val value: UUID = UUID.randomUUID()
 ) {
     override fun toString(): String {

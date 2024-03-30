@@ -11,7 +11,7 @@ import java.util.*
 /**
  * Kotlinx serializer for [java.time.UUID] class.
  */
-public object UUIDSerializer : KSerializer<UUID> {
+public object UUIDJS : KSerializer<UUID> {
     override val descriptor: SerialDescriptor = PrimitiveSerialDescriptor("java.util.UUID", PrimitiveKind.STRING)
 
     override fun deserialize(decoder: Decoder): UUID {

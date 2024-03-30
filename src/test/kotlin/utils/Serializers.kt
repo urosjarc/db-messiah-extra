@@ -1,10 +1,10 @@
 package utils
 
 import com.urosjarc.dbmessiah.data.TypeSerializer
-import com.urosjarc.dbmessiah.extra.kotlinx.InstantSerializer
-import com.urosjarc.dbmessiah.extra.kotlinx.LocalDateSerializer
-import com.urosjarc.dbmessiah.extra.kotlinx.LocalTimeSerializer
-import com.urosjarc.dbmessiah.extra.kotlinx.UUIDSerializer
+import com.urosjarc.dbmessiah.extra.kotlinx.InstantJS
+import com.urosjarc.dbmessiah.extra.kotlinx.LocalDateJS
+import com.urosjarc.dbmessiah.extra.kotlinx.LocalTimeJS
+import com.urosjarc.dbmessiah.extra.kotlinx.UUIDJS
 import com.urosjarc.dbmessiah.serializers.IdTS
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.modules.SerializersModule
@@ -12,10 +12,10 @@ import kotlinx.serialization.modules.contextual
 
 val json = Json {
     serializersModule = SerializersModule {
-        contextual(InstantSerializer)
-        contextual(LocalDateSerializer)
-        contextual(LocalTimeSerializer)
-        contextual(UUIDSerializer)
+        contextual(InstantJS)
+        contextual(LocalDateJS)
+        contextual(LocalTimeJS)
+        contextual(UUIDJS)
     }
 }
 

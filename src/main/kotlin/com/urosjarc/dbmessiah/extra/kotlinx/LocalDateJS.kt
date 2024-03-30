@@ -11,7 +11,7 @@ import java.time.LocalDate
 /**
  * Kotlinx serializer for [java.time.LocalDate] class.
  */
-public object LocalDateSerializer : KSerializer<LocalDate> {
+public object LocalDateJS : KSerializer<LocalDate> {
     override val descriptor: SerialDescriptor = PrimitiveSerialDescriptor("java.time.LocalDate", PrimitiveKind.STRING)
 
     override fun deserialize(decoder: Decoder): LocalDate {

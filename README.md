@@ -4,15 +4,11 @@
 <br>
 <table width="100%" border="0">
     <tr>
-        <td width="33%">
+        <td width="50%">
             <h3 align="center"><a href="https://github.com/urosjarc/db-messiah">db-messiah</a></h3>
             <p align="center">Kotlin lib. for enterprise database development</p>
         </td>
-        <td width="33%" align="center">
-                <p><a href="#get-started">Get started</a></p>
-                <p><a href="#features">Features</a></p>
-        </td>
-        <td width="33%">
+        <td width="50%">
             <h3 align="center"><a href="https://github.com/urosjarc/db-analyser">db-analyser</a></h3>
             <p align="center">GUI for db analysis, to help you create complex JOIN statements for SQL or db-messiah.
         </td>
@@ -30,18 +26,19 @@ implementation("com.urosjarc:db-messiah-extra:0.0.1")
 <br><h3 align="center">DB Serializers</h3>
 
 ```kotlin
-// SQLITE
+/** SQLITE */
+
 val sqliteSerializer = SqliteSerializer(
     globalSerializers = BasicTS.sqlite + KotlinxTimeTS.sqlite,
     ...
 )
 
-// POSTGRESQL
+/** POSTGRESQL */
+
 val sqliteSerializer = SqliteSerializer(
     globalSerializers = BasicTS.sqlite + KotlinxTimeTS.sqlite,
     ...
 )
-
 ```
 
 <br><h3 align="center">JSON Serializers</h3>
@@ -52,10 +49,10 @@ val sqliteSerializer = SqliteSerializer(
 
 val json = Json {
         serializersModule = SerializersModule {
-        contextual(InstantSerializer)
-        contextual(LocalDateSerializer)
-        contextual(LocalTimeSerializer)
-        contextual(UUIDSerializer)
+        contextual(InstantJS)
+        contextual(LocalDateJS)
+        contextual(LocalTimeJS)
+        contextual(UUIDJS)
     }
 }
 
@@ -67,10 +64,10 @@ val obj = json.decodeFromString<...>(...)
 install(ContentNegotiation) {
     json(Json {
         serializersModule = SerializersModule {
-            contextual(InstantSerializer)
-            contextual(LocalDateSerializer)
-            contextual(LocalTimeSerializer)
-            contextual(UUIDSerializer)
+            contextual(InstantJS)
+            contextual(LocalDateJS)
+            contextual(LocalTimeJS)
+            contextual(UUIDJS)
         }
     })
 }
@@ -78,11 +75,11 @@ install(ContentNegotiation) {
 
 <br><h3 align="center">Features</h3>
 
-|   Class   |    COLUMN    |              Databases               |      db-messiah-extra       |          JSON           |
-|:---------:|:------------:|:------------------------------------:|:---------------------------:|:-----------------------:|
-|  Instant  |   DATETIME   | Sqlite, Mysql, MSSql, Maria, H2, DB2 | KotlinxInstantTS. DATETIME  |    InstantSerializer    |
-|  Instant  |  TIMESTAMP   |       Derby, Postgres, Oracle        | KotlinxInstantTS. TIMESTAMP |    InstantSerializer    |
-| LocalDate |     DATE     |          :white_check_mark:          |  KotlinxLocalDateTS. DATE   |   LocalDateSerializer   |
-| LocalTime |     TIME     |    :white_check_mark: but Oracle     |     KotlinxTimeTS.TIME      |   LocalDateSerializer   |
-| LocalTime | NUMBER(8, 0) |                Oracle                |   KotlinxTimeTS. NUMBER8    |   LocalTimeSerializer   |>
-|   UUID    |  db-messiah  |              db-messiah              |         db-messiah          |     UUIDSerializer      |>
+|   Class   |    COLUMN    |              Databases               |      db-messiah-extra       |    JSON     |
+|:---------:|:------------:|:------------------------------------:|:---------------------------:|:-----------:|
+|  Instant  |   DATETIME   | Sqlite, Mysql, MSSql, Maria, H2, DB2 | KotlinxInstantTS. DATETIME  |  InstantJS  |
+|  Instant  |  TIMESTAMP   |       Derby, Postgres, Oracle        | KotlinxInstantTS. TIMESTAMP |  InstantJS  |
+| LocalDate |     DATE     |          :white_check_mark:          |  KotlinxLocalDateTS. DATE   | LocalDateJS |
+| LocalTime |     TIME     |    :white_check_mark: but Oracle     |     KotlinxTimeTS.TIME      | LocalDateJS |
+| LocalTime | NUMBER(8, 0) |                Oracle                |   KotlinxTimeTS. NUMBER8    | LocalTimeJS |>
+|   UUID    |  db-messiah  |              db-messiah              |         db-messiah          |   UUIDJS    |>
