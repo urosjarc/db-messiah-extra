@@ -1,0 +1,43 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.urosjarc.dbmessiah.extra.kotlinx////PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.kotlinx/index.html
+$dokka.location:com.urosjarc.dbmessiah.extra.kotlinx/InstantJS///PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.kotlinx/-instant-j-s/index.html
+$dokka.location:com.urosjarc.dbmessiah.extra.kotlinx/InstantJS/descriptor/#/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.kotlinx/-instant-j-s/descriptor.html
+$dokka.location:com.urosjarc.dbmessiah.extra.kotlinx/InstantJS/deserialize/#kotlinx.serialization.encoding.Decoder/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.kotlinx/-instant-j-s/deserialize.html
+$dokka.location:com.urosjarc.dbmessiah.extra.kotlinx/InstantJS/serialize/#kotlinx.serialization.encoding.Encoder#java.time.Instant/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.kotlinx/-instant-j-s/serialize.html
+$dokka.location:com.urosjarc.dbmessiah.extra.kotlinx/LocalDateJS///PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.kotlinx/-local-date-j-s/index.html
+$dokka.location:com.urosjarc.dbmessiah.extra.kotlinx/LocalDateJS/descriptor/#/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.kotlinx/-local-date-j-s/descriptor.html
+$dokka.location:com.urosjarc.dbmessiah.extra.kotlinx/LocalDateJS/deserialize/#kotlinx.serialization.encoding.Decoder/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.kotlinx/-local-date-j-s/deserialize.html
+$dokka.location:com.urosjarc.dbmessiah.extra.kotlinx/LocalDateJS/serialize/#kotlinx.serialization.encoding.Encoder#java.time.LocalDate/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.kotlinx/-local-date-j-s/serialize.html
+$dokka.location:com.urosjarc.dbmessiah.extra.kotlinx/LocalTimeJS///PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.kotlinx/-local-time-j-s/index.html
+$dokka.location:com.urosjarc.dbmessiah.extra.kotlinx/LocalTimeJS/descriptor/#/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.kotlinx/-local-time-j-s/descriptor.html
+$dokka.location:com.urosjarc.dbmessiah.extra.kotlinx/LocalTimeJS/deserialize/#kotlinx.serialization.encoding.Decoder/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.kotlinx/-local-time-j-s/deserialize.html
+$dokka.location:com.urosjarc.dbmessiah.extra.kotlinx/LocalTimeJS/serialize/#kotlinx.serialization.encoding.Encoder#java.time.LocalTime/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.kotlinx/-local-time-j-s/serialize.html
+$dokka.location:com.urosjarc.dbmessiah.extra.kotlinx/UUIDJS///PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.kotlinx/-u-u-i-d-j-s/index.html
+$dokka.location:com.urosjarc.dbmessiah.extra.kotlinx/UUIDJS/descriptor/#/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.kotlinx/-u-u-i-d-j-s/descriptor.html
+$dokka.location:com.urosjarc.dbmessiah.extra.kotlinx/UUIDJS/deserialize/#kotlinx.serialization.encoding.Decoder/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.kotlinx/-u-u-i-d-j-s/deserialize.html
+$dokka.location:com.urosjarc.dbmessiah.extra.kotlinx/UUIDJS/serialize/#kotlinx.serialization.encoding.Encoder#java.util.UUID/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.kotlinx/-u-u-i-d-j-s/serialize.html
+$dokka.location:com.urosjarc.dbmessiah.extra.serializers////PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.serializers/index.html
+$dokka.location:com.urosjarc.dbmessiah.extra.serializers/KotlinxInstantTS///PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.serializers/-kotlinx-instant-t-s/index.html
+$dokka.location:com.urosjarc.dbmessiah.extra.serializers/KotlinxInstantTS/DATETIME/#/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.serializers/-kotlinx-instant-t-s/-d-a-t-e-t-i-m-e.html
+$dokka.location:com.urosjarc.dbmessiah.extra.serializers/KotlinxInstantTS/TIMESTAMP/#/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.serializers/-kotlinx-instant-t-s/-t-i-m-e-s-t-a-m-p.html
+$dokka.location:com.urosjarc.dbmessiah.extra.serializers/KotlinxLocalDateTS///PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.serializers/-kotlinx-local-date-t-s/index.html
+$dokka.location:com.urosjarc.dbmessiah.extra.serializers/KotlinxLocalDateTS/DATE/#/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.serializers/-kotlinx-local-date-t-s/-d-a-t-e.html
+$dokka.location:com.urosjarc.dbmessiah.extra.serializers/KotlinxLocalTimeTS///PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.serializers/-kotlinx-local-time-t-s/index.html
+$dokka.location:com.urosjarc.dbmessiah.extra.serializers/KotlinxLocalTimeTS/NUMBER8/#/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.serializers/-kotlinx-local-time-t-s/-n-u-m-b-e-r8.html
+$dokka.location:com.urosjarc.dbmessiah.extra.serializers/KotlinxLocalTimeTS/TIME/#/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.serializers/-kotlinx-local-time-t-s/-t-i-m-e.html
+$dokka.location:com.urosjarc.dbmessiah.extra.serializers/KotlinxTimeTS///PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.serializers/-kotlinx-time-t-s/index.html
+$dokka.location:com.urosjarc.dbmessiah.extra.serializers/KotlinxTimeTS/DATETIME/#/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.serializers/-kotlinx-time-t-s/-d-a-t-e-t-i-m-e.html
+$dokka.location:com.urosjarc.dbmessiah.extra.serializers/KotlinxTimeTS/TIMESTAMP/#/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.serializers/-kotlinx-time-t-s/-t-i-m-e-s-t-a-m-p.html
+$dokka.location:com.urosjarc.dbmessiah.extra.serializers/KotlinxTimeTS/db2/#/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.serializers/-kotlinx-time-t-s/db2.html
+$dokka.location:com.urosjarc.dbmessiah.extra.serializers/KotlinxTimeTS/derby/#/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.serializers/-kotlinx-time-t-s/derby.html
+$dokka.location:com.urosjarc.dbmessiah.extra.serializers/KotlinxTimeTS/h2/#/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.serializers/-kotlinx-time-t-s/h2.html
+$dokka.location:com.urosjarc.dbmessiah.extra.serializers/KotlinxTimeTS/maria/#/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.serializers/-kotlinx-time-t-s/maria.html
+$dokka.location:com.urosjarc.dbmessiah.extra.serializers/KotlinxTimeTS/mssql/#/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.serializers/-kotlinx-time-t-s/mssql.html
+$dokka.location:com.urosjarc.dbmessiah.extra.serializers/KotlinxTimeTS/mysql/#/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.serializers/-kotlinx-time-t-s/mysql.html
+$dokka.location:com.urosjarc.dbmessiah.extra.serializers/KotlinxTimeTS/oracle/#/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.serializers/-kotlinx-time-t-s/oracle.html
+$dokka.location:com.urosjarc.dbmessiah.extra.serializers/KotlinxTimeTS/postgresql/#/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.serializers/-kotlinx-time-t-s/postgresql.html
+$dokka.location:com.urosjarc.dbmessiah.extra.serializers/KotlinxTimeTS/sqlite/#/PointingToDeclaration/db-messiah-extra/com.urosjarc.dbmessiah.extra.serializers/-kotlinx-time-t-s/sqlite.html
+com.urosjarc.dbmessiah.extra.kotlinx
+com.urosjarc.dbmessiah.extra.serializers
+
