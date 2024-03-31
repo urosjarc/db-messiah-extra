@@ -1,6 +1,5 @@
 import org.jetbrains.dokka.DokkaConfiguration.Visibility
 import java.lang.Thread.sleep
-import java.net.URI
 
 val GPG_PRIVATE_KEY = System.getenv("GPG_PRIVATE_KEY")
 val GPG_PRIVATE_PASSWORD = System.getenv("GPG_PRIVATE_PASSWORD")
@@ -111,6 +110,12 @@ dependencies {
     testImplementation("org.apache.logging.log4j:log4j-slf4j2-impl:2.20.0")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("com.urosjarc:db-messiah:$dbMessiah")
+
+    val ktor_version = "2.3.8"
+    testImplementation("io.ktor:ktor-server-core-jvm:$ktor_version")
+    testImplementation("io.ktor:ktor-server-netty-jvm:$ktor_version")
+    testImplementation("io.ktor:ktor-server-content-negotiation:$ktor_version")
+    testImplementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
 }
 
 tasks.test {
@@ -165,4 +170,44 @@ publishing {
         }
     }
 
+}
+
+tasks.register<GradleBuild>("readme") {
+    group = "verification"
+    description = "Create README.md tests."
+    this.tasks = listOf("test")
+
+    doLast {
+        val templateLines = File("./src/test/kotlin/Test_README.kt").readLines()
+        var readme = File("./src/test/kotlin/Test_README.md").readText()
+
+        val dependencies = mutableListOf(
+            "implementation(\"${project.group}:${project.name}-extra:$version\")",
+        )
+
+        val readmeMap: MutableList<Pair<String, MutableList<String>>> = mutableListOf(
+            "// START 'Dependencies'" to dependencies,
+        )
+
+
+        var active = false
+        var indent = ""
+        templateLines.forEach {
+            if (it.contains("// START '")) {
+                indent = it.split("//").first()
+                active = true
+                readmeMap.add(it.replaceFirst(indent, "") to mutableListOf())
+            } else if (it.contains("// STOP")) {
+                active = false
+            } else if (active) {
+                readmeMap.last().second.add(it.replaceFirst(indent, ""))
+            }
+        }
+
+        readmeMap.forEach { (key, value) ->
+            readme = readme.replace(oldValue = key, newValue = value.joinToString("\n"))
+        }
+
+        File("README.md").writeText(readme)
+    }
 }

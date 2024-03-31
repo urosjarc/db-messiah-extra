@@ -33,72 +33,25 @@
 <h2 align="center">Get started</h2>
 
 ```kotlin
-implementation("com.urosjarc:db-messiah-extra-extra:0.0.1")
+// START 'Dependencies'
 ```
 
 <br><h3 align="center">Domain</h3>
 
 ```kotlin
-@Serializable
-data class MyTable(
-    @Contextual
-    val pk: UUID = UUID.randomUUID(),
-    val instant: kotlinx.datetime.Instant,
-    val localDate: kotlinx.datetime.LocalDate,
-    val localTime: kotlinx.datetime.LocalTime,
-)
-
+// START 'Domain'
 ```
 
 <br><h3 align="center">DB Serializers</h3>
 
 ```kotlin
-val sqliteSerializer = SqliteSerializer(
-    globalSerializers = BasicTS.sqlite + KotlinxTimeTS.sqlite,
-    tables = listOf(Table(MyTable::pk)),
-)
+// START 'DB Serializers'
 ```
 
 <br><h3 align="center">JSON Serializers</h3>
 
 ```kotlin
-/** JSON */
-
-val json = Json {
-    serializersModule = SerializersModule {
-        contextual(InstantJS)
-        contextual(LocalDateJS)
-        contextual(LocalTimeJS)
-        contextual(UUIDJS)
-    }
-}
-
-/** KTOR */
-
-embeddedServer(Netty, port = 8080, host = "0.0.0.0") {
-    install(ContentNegotiation) {
-        json(Json {
-            serializersModule = SerializersModule {
-                contextual(InstantJS)
-                contextual(LocalDateJS)
-                contextual(LocalTimeJS)
-                contextual(UUIDJS)
-            }
-        })
-    }
-}
-
-/** USAGE */
-
-val dtNow = Clock.System.now().toLocalDateTime(timeZone = TimeZone.UTC)
-val myTable = MyTable(
-    instant = Clock.System.now(),
-    localDate = dtNow.date,
-    localTime = dtNow.time
-)
-val jsonStr = json.encodeToString(myTable)
-val obj = json.decodeFromString<MyTable>(jsonStr)
-assert(obj == myTable)
+// START 'JSON Serializers'
 ```
 
 <br><br><h2 align="center">Specifications</h3>
