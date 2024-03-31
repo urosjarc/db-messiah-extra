@@ -2,7 +2,7 @@
 
 MAVEN_PROJECT="db-messiah-extra"
 MAVEN_GROUP="com.urosjarc"
-MAVEN_VERSION="0.0.1"
+MAVEN_VERSION="0.0.2"
 MAVEN_PATH="com/urosjarc/db-messiah-extra"
 
 echo "MAVEN_PROJECT: $MAVEN_PROJECT"

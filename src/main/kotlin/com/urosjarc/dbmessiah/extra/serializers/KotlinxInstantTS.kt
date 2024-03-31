@@ -19,7 +19,7 @@ public object KotlinxInstantTS {
         kclass = Instant::class,
         dbType = "DATETIME",
         jdbcType = JDBCType.TIMESTAMP,
-        decoder = { rs, i, info -> rs.getTimestamp(i).toInstant().toKotlinInstant() },
+        decoder = { rs, i, _ -> rs.getTimestamp(i).toInstant().toKotlinInstant() },
         encoder = { ps, i, x -> ps.setTimestamp(i, Timestamp.from(x.toJavaInstant())) }
     )
 
@@ -30,7 +30,7 @@ public object KotlinxInstantTS {
         kclass = Instant::class,
         dbType = "TIMESTAMP",
         jdbcType = JDBCType.TIMESTAMP,
-        decoder = { rs, i, info -> rs.getTimestamp(i).toInstant().toKotlinInstant() },
+        decoder = { rs, i, _ -> rs.getTimestamp(i).toInstant().toKotlinInstant() },
         encoder = { ps, i, x -> ps.setTimestamp(i, Timestamp.from(x.toJavaInstant())) }
     )
 }

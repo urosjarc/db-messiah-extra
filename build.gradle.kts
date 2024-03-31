@@ -19,8 +19,10 @@ plugins {
     id("io.github.gradle-nexus.publish-plugin") version "1.3.0"
 }
 
+val dbMessiah = "0.0.2"
+
 group = "com.urosjarc"
-version = "0.0.1"
+version = "0.0.2"
 val github = "https://github.com/urosjarc/db-messiah-extra"
 
 kotlin {
@@ -89,7 +91,6 @@ tasks.dokkaHtml {
 }
 
 dependencies {
-    val dbMessiah = "0.0.1"
 
     compileOnly("com.urosjarc:db-messiah:$dbMessiah")
     compileOnly("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")

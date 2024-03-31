@@ -19,7 +19,7 @@ public object KotlinxLocalDateTS {
         kclass = LocalDate::class,
         dbType = "DATE",
         jdbcType = JDBCType.DATE,
-        decoder = { rs, i, info -> rs.getDate(i).toLocalDate().toKotlinLocalDate() },
+        decoder = { rs, i, _ -> rs.getDate(i).toLocalDate().toKotlinLocalDate() },
         encoder = { ps, i, x -> ps.setDate(i, Date.valueOf(x.toJavaLocalDate())) }
     )
 

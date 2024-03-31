@@ -19,7 +19,7 @@ public object KotlinxLocalTimeTS {
         kclass = LocalTime::class,
         dbType = "TIME",
         jdbcType = JDBCType.TIME,
-        decoder = { rs, i, info -> rs.getTime(i).toLocalTime().toKotlinLocalTime() },
+        decoder = { rs, i, _ -> rs.getTime(i).toLocalTime().toKotlinLocalTime() },
         encoder = { ps, i, x -> ps.setTime(i, Time.valueOf(x.toJavaLocalTime())) }
     )
 
@@ -30,7 +30,7 @@ public object KotlinxLocalTimeTS {
         kclass = LocalTime::class,
         dbType = "NUMBER(8, 0)",
         jdbcType = JDBCType.NUMERIC,
-        decoder = { rs, i, info -> LocalTime.fromMillisecondOfDay(rs.getInt(i)) },
+        decoder = { rs, i, _ -> LocalTime.fromMillisecondOfDay(rs.getInt(i)) },
         encoder = { ps, i, x -> ps.setInt(i, x.toMillisecondOfDay()) }
     )
 
