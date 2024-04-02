@@ -1,5 +1,5 @@
 <h1 align="center">db-messiah-extra</h1>
-<h3 align="center">Extra Utils for Db Messiah, kotlin lib. for enterprise database development</h3>
+<h3 align="center">Extra Utils for db-messiah.<br>Support for kotlinx datetime and serialization.</h3>
 <p align="center">
     +<b>15</b> <a href="https://github.com/urosjarc/db-messiah-extra/blob/master/src/test">e2e</a> tests with <b>100%</b> instruction coverage<br>
     readme code snippets are
@@ -13,7 +13,7 @@
     <tr>
         <td width="33%">
             <h3 align="center"><a href="https://github.com/urosjarc/db-messiah">db-messiah</a></h3>
-            <p align="center">Kotlin lib. for enterprise database development</p>
+            <p align="center">Kotlin lib. for database development</p>
         </td>
         <td width="33%" align="center">
                 <p><a href="#get-started">Get started</a></p>
@@ -126,7 +126,7 @@ src/main/kotlin/com/urosjarc/dbmessiah/extra/
     |-- KotlinxInstantTS.kt.....| kotlinx.datetime.Instant type serializer for db-messiah
     |-- KotlinxLocalDateTS.kt...| kotlinx.datetime.LocalDate type serializer for db-messiah
     |-- KotlinxLocalTimeTS.kt...| kotlinx.datetime.LocalTime type serializer for db-messiah
-    `-- KotlinxTimeTS.kt........| kotlinx.datetime.Time type serializer for db-messiah
+    `-- KotlinxTimeTS.kt........| kotlinx.datetime serializers grouped for each database
 ```
 
 <br><br><h2 align="center">Sources</h2>

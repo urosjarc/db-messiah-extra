@@ -132,8 +132,8 @@ publishing {
             from(components["java"])
             artifact(javadocJar)
             pom {
-                name = "Db Messiah Extra Utils"
-                description = "Extra Utils for Db Messiah, kotlin lib. for enterprise database development"
+                name = "Db Messiah Extra"
+                description = "Extra Utils for Db Messiah.<br>Support for kotlinx datetime and serialization"
                 url = github
                 issueManagement {
                     system = "Github"
@@ -183,7 +183,7 @@ tasks.register<GradleBuild>("readme") {
         var readme = File("./src/test/kotlin/Test_README.md").readText()
 
         val dependencies = mutableListOf(
-            "implementation(\"${project.group}:${project.name}-extra:$version\")",
+            "implementation(\"${project.group}:${project.name}-extra:${project.version}\")",
         )
 
         val readmeMap: MutableList<Pair<String, MutableList<String>>> = mutableListOf(
